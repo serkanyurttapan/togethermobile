@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" ></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Pictures</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col size="4">
+       <div class="cadre">
+        <ion-icon size="large" *ngIf="!photo1" color="danger" name="add-circle-sharp" 
+                  style="margin-top: 50px;" >
+        </ion-icon>
+        <img [src]="photo1" height="100%" width="100%" />
+       </div>
+       <ion-icon size="large" *ngIf="photo1" name="close-circle-sharp" color="danger"
+                 ></ion-icon>
+    </ion-col>
+    <ion-col size="4">
+      <div class="cadre">
+       <ion-icon size="large"  *ngIf="!photo2" color="danger" name="add-circle-sharp"
+                 style="margin-top: 50px;" >
+       </ion-icon>
+      </div>
+      <ion-icon size="large" *ngIf="photo2" name="close-circle-sharp" color="danger"
+        ></ion-icon>
+    </ion-col>
+    <ion-col size="4">
+      <div class="cadre">
+       <ion-icon size="large" *ngIf="!photo3" color="danger" name="add-circle-sharp"
+                 style="margin-top: 50px;">
+       </ion-icon>
+      </div>
+      <ion-icon size="large" *ngIf="photo3" name="close-circle-sharp" color="danger"
+       ></ion-icon>
+   </ion-col>
+  </ion-row>
+</ion-content>

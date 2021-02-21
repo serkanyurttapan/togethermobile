@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Setting</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+     <ion-item>
+        <ion-row>
+          <ion-col size="6" style="height: 15px;">
+            <ion-label><b>Age</b></ion-label>
+           <ion-label position="floating">Min</ion-label>
+           <ion-input inputmode="number" required="true" (click)="showPickerMin()"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-label>&nbsp;</ion-label>
+           <ion-label position="floating">Max</ion-label>
+           <ion-input inputmode="number" required="true" (click)="showPickerMax()"></ion-input>
+          </ion-col>
+        </ion-row>
+     </ion-item><br>
+     <ion-item>
+      <ion-label><h2><b>Sex</b></h2></ion-label>
+      <ion-input inputmode="text" required="true" (click)="showPickerSex()"></ion-input>
+     </ion-item><br>
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-select required="true">
+          <ion-select-option value="albanie">
+            Albania
+          </ion-select-option>
+          <ion-select-option value="angola">
+            Angola
+          </ion-select-option>
+          <ion-select-option value="armeny">
+            Armenia
+          </ion-select-option>
+        </ion-select>
+      </ion-item><br>
+      <ion-item>
+        <ion-label>State</ion-label>
+        <ion-select required="true" >
+          <ion-select-option value="albanie">
+            Albany
+          </ion-select-option>
+          <ion-select-option value="angola">
+            Angola
+          </ion-select-option>
+          <ion-select-option value="armeny">
+            Armeny
+          </ion-select-option>
+        </ion-select>
+      </ion-item><br>
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-select required="true">
+          <ion-select-option value="albanie">
+            New York
+          </ion-select-option>
+          <ion-select-option value="angola">
+            California
+          </ion-select-option>
+          <ion-select-option value="armeny">
+            Mineapolis
+          </ion-select-option>
+        </ion-select>
+      </ion-item><br>
+     <ion-item>
+      <ion-label>Notification</ion-label>
+      <ion-toggle color="primary" slot="end" ></ion-toggle>
+     </ion-item>
+   </ion-list>
+</ion-content>
