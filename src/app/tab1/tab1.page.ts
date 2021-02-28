@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class Tab1Page implements OnInit, AfterViewInit {
   people = [
     {
-      name: 'Maxie Lynch',
+      name: 'Maxie Lynch', 
       img: '../../assets/chat/chat1.jpg',
       city: 'New York',
       country: 'USA',
@@ -75,6 +75,7 @@ export class Tab1Page implements OnInit, AfterViewInit {
 
   // DISLIKE ACTION
   onDisLike() {
+    debugger;
         const card = this.cards.toArray()[this.cards.toArray().length - this.nbr];
         card.nativeElement.style.transition = '1s ease-out';
         card.nativeElement.style.transform = `translateX(${-this.plt.width() * 2}px)
