@@ -1,0 +1,47 @@
+<ion-content>
+  <img src="../../assets/logo/togetherlogo.png" style="margin-left: 75px; max-width: 100%; max-width: 80%" />
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" color="dark"><strong> E posta adresi</strong></ion-label>
+        <ion-input [(ngModel)]="login.email" placeholder="kullanici@gmail.com" name="email" type="email"
+          #email="ngModel" spellcheck="false" autocapitalize="off" required
+          pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="email.valid || submitted == false" class="ion-padding-start">
+          <small>Email Alanı Gereklidir.</small>
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label position="stacked" color="dark"><strong>Şifre</strong></ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
+          <small>Şifre Alanı Gereklidir.</small>
+        </p>
+      </ion-text>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" style="text-transform: none" [disabled]="loginForm.invalid"
+          (click)="onLogin(loginForm)" type="submit" expand="block">
+          Giriş yap
+        </ion-button>
+
+        <ion-button color="danger" expand="block" style="text-transform: none; margin-top: 5px; border-radius: 10px"
+          (click)="googleSignIn()">
+          Kayıt ol
+        </ion-button>
+        <ion-chip outline color="danger" routerLink="/forgotpassword">
+          <small> Şifremi unuttum! </small>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
